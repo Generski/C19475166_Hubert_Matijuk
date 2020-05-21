@@ -31,7 +31,7 @@ class Ship
     {//When going right
       //Base
       stroke(255);
-      fill(0);
+      fill(col, 100, 100);
       rect(x - s/2, y - s/2, s, s);
       triangle(x - s/2, y - s/2, x - s * 1.25, y + s/2, x - s/2, y + s/2);
 
@@ -46,7 +46,7 @@ class Ship
     {//When going left
       //Base
       stroke(255);
-      fill(0);
+      fill(col, 100, 100);
       rect(x - s/2, y - s/2, s, s);
       triangle(x + s/2, y - s/2, x + s * 1.25, y + s/2, x + s/2, y + s/2);
 

@@ -10,6 +10,7 @@ AudioPlayer music;
 
 Star[] stars = new Star[100];
 Ship[] ships = new Ship[2];
+Planet[] planets = new Planet[10];
 
 float col = 0;
 
@@ -33,6 +34,11 @@ void setup()
   for (int i = 0; i < ships.length; i++)
   {
     ships[i] = new Ship(width/2, height/6 * (i + 1), shipSize);
+  }
+  
+  for (int i = 0; i < planets.length; i++)
+  {
+    planets[i] = new Planet();
   }
   
   colorMode(HSB);
@@ -75,5 +81,11 @@ void draw()
     s.display();
     s.move();
     s.trail();
+  }
+  
+  for (Planet p : planets)
+  {
+    p.display();
+    p.move();
   }
 }
