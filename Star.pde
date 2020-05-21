@@ -4,7 +4,10 @@ class Star
   float y;
   float l;
   
+  float speed = random(0.1, 0.3);
+  
   float col = random(0, 255);
+  float brightness = 255;
   
   Star(float tempL)
   {
@@ -15,8 +18,21 @@ class Star
   
   void display()
   {
-    stroke(col, 255, 255);
+    stroke(col, 255, brightness);
     line(x - l, y, x + l, y);
     line(x, y - l, x, y + l);
+  }
+  
+  void fall()
+  {
+    y += speed;
+    brightness -= speed;
+    
+    if(y >= height/2 - l)
+    {
+      y = 0 - l;
+      x = random(0, width);
+      brightness = 255;
+    }
   }
 }

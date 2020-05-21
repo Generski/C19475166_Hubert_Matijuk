@@ -66,6 +66,7 @@ void draw()
   for (Star s : stars)
   {
     s.display();
+    s.fall();
   }
 
   //Drawing ships

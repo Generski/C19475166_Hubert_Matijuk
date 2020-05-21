@@ -14,7 +14,7 @@ class Ship
     y = tempY;
     s = tempS;
 
-    if (y <= width/6)
+    if (y <= height/6)
     {
       speed = 1;
     } else
