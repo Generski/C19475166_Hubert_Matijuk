@@ -34,7 +34,7 @@ void setup()
   {
     ships[i] = new Ship(width/2, height/6 * (i + 1), shipSize);
   }
-
+  
   colorMode(HSB);
 }
 
@@ -53,7 +53,7 @@ void draw()
    stroke(255);
    line(0, height/2, width, height/2);
    */
-  
+
   //Line
   for (int i = 0; i < music.bufferSize() - 1; i++)
   {
@@ -74,5 +74,6 @@ void draw()
   {
     s.display();
     s.move();
+    s.trail();
   }
 }
