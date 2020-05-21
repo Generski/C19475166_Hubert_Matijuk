@@ -1,6 +1,9 @@
 Star[] stars = new Star[100];
+Ship[] ships = new Ship[2];
 
 float col = 0;
+
+float shipSize = 50;
 
 void setup()
 {
@@ -10,6 +13,12 @@ void setup()
   for (int i = 0; i < stars.length; i++)
   {
     stars[i] = new Star(3);
+  }
+  
+  //Instantiate ships
+  for(int i = 0; i < ships.length; i++)
+  {
+    ships[i] = new Ship(width/2, height/6 * (i + 1), shipSize);
   }
 
   colorMode(HSB);
@@ -34,5 +43,12 @@ void draw()
   for (Star s : stars)
   {
     s.display();
+  }
+  
+  //Drawing ships
+  for (Ship s : ships)
+  {
+    s.display();
+    s.move();
   }
 }
