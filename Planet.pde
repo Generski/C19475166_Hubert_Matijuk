@@ -39,7 +39,7 @@ class Planet
     noStroke();
     fill(col, 255, 255);
     ellipse(x, y, s, s);
-    
+
     //Crater
     stroke(0);
     fill(col, 200, 200);
@@ -61,6 +61,45 @@ class Planet
       x = 0 - s;
       y = height/2 + s;
       col = random(0, 255);
+    }
+  }
+
+  boolean press()
+  {
+    float d = dist(mouseX, mouseY, x, y);
+
+    if (d < s/2)
+    {
+      return true;
+    } else
+    {
+      return false;
+    }
+  }
+
+  void reset()
+  {
+    s = random(10, 40);
+    y = random(height/2 + s, height - s);
+    col = random(0, 255);
+
+    craterPosX = random(-s/6, s/6);
+    craterPosY = random(-s/6, s/6);
+    craterSize = random(s/4, s/2);
+
+    speed = random(-3, 3);
+
+    if (speed == 0)
+    {
+      speed = random(-3, 3);
+    }
+
+    if (speed > 0)
+    {
+      x = 0 - s;
+    } else
+    {
+      x = width + s;
     }
   }
 }
