@@ -24,10 +24,11 @@ class Star
   }
   
   void fall()
-  {
+  {//Fall down and fade away
     y += speed;
     brightness -= speed;
     
+    //Reset the star
     if(y >= height/2 - l)
     {
       y = 0 - l;

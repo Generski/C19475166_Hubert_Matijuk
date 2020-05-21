@@ -8,14 +8,15 @@ class Ship
   
   float col = random(0, 255);
 
-  boolean right;
+  boolean right; //Check if the ship is facing right
 
   Ship(float tempX, float tempY, float tempS)
   {
     x = tempX;
     y = tempY;
     s = tempS;
-
+    
+    //Determine the initial direction
     if (y <= height/6)
     {
       speed = 1;

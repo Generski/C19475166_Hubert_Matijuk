@@ -79,14 +79,17 @@ class Planet
 
   void reset()
   {
+    //Reset values
     s = random(10, 40);
     y = random(height/2 + s, height - s);
     col = random(0, 255);
-
+    
+    //Reset position
     craterPosX = random(-s/6, s/6);
     craterPosY = random(-s/6, s/6);
     craterSize = random(s/4, s/2);
-
+    
+    //Randomize speed and direction of movement
     speed = random(-3, 3);
 
     if (speed == 0)

@@ -111,7 +111,7 @@ void draw()
       text("Score: " + score, width/2 - 40, 50);
     }
   } else if (music.isPlaying() == false)
-  {
+  {//Game O
     fill(255);
     textSize(50);
     text("Well done!", width/2 - 125, height/2);
